@@ -8,4 +8,9 @@ class ApplicationController < ActionController::Base
   end
   helper_method :current_user
 
+  private
+
+  def check_if_signed_in
+    redirect_to root_path unless current_user
+  end
 end

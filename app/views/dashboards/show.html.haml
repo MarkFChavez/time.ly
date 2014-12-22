@@ -1,1 +1,29 @@
-hi
+.row
+  .col-lg-8
+    .box.panel.panel-default
+      .padding10
+        %span.lead Reminder 1
+
+    .box.panel.panel-default
+      .padding10
+        %span.lead Reminder 2
+
+  .col-lg-4
+    .row
+      .col-lg-12
+        %span Access Token:
+        %span.bold.access_token
+          ************** 
+          = link_to "Show", "#", class: "btn btn-sm btn-default show-token", "data-url" => fetch_tokens_path
+
+
+    .row.top20
+      .col-lg-12
+        The token above is used for accessing the API endpoints available. Do not show it to anyone.
+
+    .row.top20
+      .col-lg-12
+        = link_to tokens_path, class: "btn btn-md btn-primary", "data-confirm" => "Are you sure?", method: :post do
+          %i.fa.fa-refresh.fa-lg
+          Reset Token
+

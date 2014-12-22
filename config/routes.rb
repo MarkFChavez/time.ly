@@ -5,4 +5,9 @@ Rails.application.routes.draw do
   delete "/logout" => "sessions#destroy", as: :logout
 
   resource :dashboard, only: [:show]
+  resources :tokens, only: [:create] do
+    collection do
+      get "/fetch_token" => "tokens#fetch_token", as: :fetch
+    end
+  end
 end

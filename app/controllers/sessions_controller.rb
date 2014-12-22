@@ -1,6 +1,6 @@
 class SessionsController < ApplicationController
   def create
-    user = User.from_omniauth auth_hash
+    user = User.from_omniauth auth_hash, TokenGenerator.run
     session["user.id"] = user.id
 
     redirect_to dashboard_path
