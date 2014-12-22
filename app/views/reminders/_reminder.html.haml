@@ -3,7 +3,7 @@
     %span.lead= reminder.description
 
   .pull-right
-    = link_to "#", class: "lead btn btn-success" do
+    = link_to messages_path(id: reminder), class: "lead btn btn-success", method: :post do
       %i.fa.fa-slack
       Send to Slack!
 

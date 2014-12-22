@@ -10,4 +10,5 @@ Rails.application.routes.draw do
       get "/fetch_token" => "tokens#fetch_token", as: :fetch
     end
   end
+  resources :messages, only: [:create]
 end
