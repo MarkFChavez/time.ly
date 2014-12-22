@@ -6,13 +6,26 @@
     = csrf_meta_tags
   %body
 
-    .container
-      .row
-        .col-lg-12
-          %h1 Time.ly
-          %hr
-  
-    .container
+    %nav.navbar.navbar-default.navbar-fixed-top{ role: "navigation" }
+      .container
+        .navbar-header
+          %button.navbar-toggle.collapsed{ type: "button", "data-toggle" => "collapse", "data-target" => "#bs-example-navbar-collapse-1" }
+            %span.sr-only Toggle navigation
+            %span.icon-bar
+            %span.icon-bar
+            %span.icon-bar
+
+          = link_to "Time.ly", root_path, class: "navbar-brand"
+
+        .collapse.navbar-collapse#bs-example-navbar-collapse-1
+          %ul.nav.navbar-nav.navbar-right
+            %li.active
+              = link_to current_user.name, "#"
+
+            %li
+              = link_to "Logout", logout_path, method: :delete, "data-confirm" => "Are you sure?"
+
+    .container.top70
       .row
         .col-lg-12
           = yield
