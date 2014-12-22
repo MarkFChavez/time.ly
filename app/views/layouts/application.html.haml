@@ -5,11 +5,16 @@
     = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true
     = csrf_meta_tags
   %body
-
     .container
       .row
         .col-lg-12
-          %h1 Time.ly
+          .text-center
+            %h1.heading Time.ly
+            %p.subheading Receive reminders in a timely manner
+
+            = link_to "#", class: "btn btn-lg btn-default" do
+              %i.fa.fa-github.fa-lg
+              Sign in with GitHub
 
 
     = yield
