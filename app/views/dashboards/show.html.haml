@@ -1,10 +1,7 @@
 .row
   .col-lg-8
     - if @reminders.any?
-      - @reminders.each do |reminder|
-        .box.panel.panel-default
-          .padding10
-            %span.lead= reminder.description
+      = render @reminders
 
     - else
       .text-center
