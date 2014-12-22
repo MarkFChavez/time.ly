@@ -16,6 +16,7 @@ ActiveRecord::Schema.define(version: 20141222073125) do
   create_table "users", force: true do |t|
     t.string   "provider"
     t.string   "uid"
+    t.string   "name"
     t.string   "email"
     t.string   "image"
     t.datetime "created_at"

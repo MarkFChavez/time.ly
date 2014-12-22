@@ -3,6 +3,7 @@ class CreateUser < ActiveRecord::Migration
     create_table :users do |t|
       t.column :provider, :string
       t.column :uid, :string
+      t.column :name, :string
       t.column :email, :string
       t.column :image, :string
 
