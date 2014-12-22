@@ -1,14 +1,14 @@
 .row
   .col-lg-8
-    .text-center
-      %span.lead You have no reminders
-    -# .box.panel.panel-default
-    -#   .padding10
-    -#     %span.lead Reminder 1
+    - if @reminders.any?
+      - @reminders.each do |reminder|
+        .box.panel.panel-default
+          .padding10
+            %span.lead= reminder.description
 
-    -# .box.panel.panel-default
-    -#   .padding10
-    -#     %span.lead Reminder 2
+    - else
+      .text-center
+        %span.lead You have no reminders
 
   .col-lg-4
     .text-center

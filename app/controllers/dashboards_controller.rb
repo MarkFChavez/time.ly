@@ -3,6 +3,12 @@ class DashboardsController < ApplicationController
   layout "authenticated"
 
   def show
+    @reminders = reminders
   end
 
+  private
+
+  def reminders
+    current_user.reminders.newest
+  end
 end

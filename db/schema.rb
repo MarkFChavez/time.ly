@@ -11,7 +11,16 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141222084605) do
+ActiveRecord::Schema.define(version: 20141222094324) do
+
+  create_table "reminders", force: true do |t|
+    t.text     "description"
+    t.integer  "user_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "reminders", ["user_id"], name: "index_reminders_on_user_id"
 
   create_table "users", force: true do |t|
     t.string   "provider"
