@@ -8,7 +8,8 @@ gem 'haml-rails'
 gem 'omniauth'
 gem 'omniauth-github'
 
-gem 'sidekiq'
+gem 'sidekiq', '~> 2.17.7'
+gem 'sidetiq'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.1.5'
