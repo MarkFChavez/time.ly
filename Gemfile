@@ -5,6 +5,13 @@ gem 'font-awesome-sass', '~> 4.2.0'
 gem 'haml'
 gem 'haml-rails'
 
+gem 'capistrano', '~> 3.3.0'
+
+group :development, :test do
+  gem 'pry'
+  gem 'pry-rails'
+end
+
 gem 'omniauth'
 gem 'omniauth-github'
 

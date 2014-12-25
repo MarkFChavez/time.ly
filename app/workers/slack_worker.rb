@@ -3,7 +3,7 @@ class SlackWorker
   include Sidetiq::Schedulable
 
   recurrence do
-    hourly.minute_of_hour(0, 30) 
+    minutely(10)
   end
   sidekiq_options :retry => false
 
